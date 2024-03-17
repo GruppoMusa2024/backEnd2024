@@ -32,10 +32,10 @@ I topi non avevano nipoti
 echo"<hr>";
 
 $myString = "I topi non avevano nipoti";
-function checkPalindrome(string $string):void{
-$newString = preg_replace("/[^a-zA-Z0-9]/","", $string);
-$newString = strtolower((string)$newString);
-if ($newString === strrev($newString)) {
+function checkPalindrome(string $string):void{  //ritorna void perche' stampa il risultato e basta
+$newString = preg_replace("/[^a-zA-Z0-9]/","", $string);//elimina spazi e altri caratteri
+$newString = strtolower((string)$newString);//trasforma tutti i caratteri in minuscolo
+if ($newString === strrev($newString)) {//confronta la stringa con la stringa invertita
     echo "The string <strong>'$string'</strong> is a palindrome";
 }
 else {
